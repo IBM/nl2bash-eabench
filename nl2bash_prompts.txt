@@ -1,0 +1,156 @@
+
+    These prompts are covered by Community Data License Agreement - Permissive - Version 2.0
+
+Set bash3
+What is the bash script which outputs the Burrows-Wheeler transform of its argument string?
+What is the bash script that finds all the twin primes between its two input arguments?
+What is the bash script to list all groups which have two or more members?
+What is the bash script to find the greatest common divisor of its two integer arguments?
+What is the bash script that finds the smallest number where the sum of its digits is equal to the argument to the script?
+What is the bash script which outputs the ordinal date (yyddd) for the date given as an argument in yyyy-mm-dd format?
+What is the bash script that counts the number of palindromic prime numbers less than its argument?
+What is the bash script which outputs the Levenshtein distance between two strings given as arguments?
+What is the bash script which finds all numbers less than its input argument that are equal to the sum of the factorial of each of its digits?
+What is the bash script which checks for duplicate user names in /etc/passwd?
+What is the bash script which, for each user in /etc/shadow, prints out the number of days before thair password expires?
+What is the bash script which outputs each base between 2 and 16 where its input argument is a palindrome when expressed in that base?
+What is the bash script which outputs the Luhn check digit for its input argument?
+What is the bash script which converts its argument from base 7 to base 3?
+What is the bash script which finds two consecutive prime numbers less than its argument such that both their sum and product are palindromes?
+What is the bash script which searches the directory /home/test/downloads for symbolic links to files in /home/test/uploads and adds the name of the target file to the file uploads.targets in /home/test?
+What is the bash script which computes the Hamming weight of its argument given as a decimal number?
+What is the bash script which outputs the square root of two after four iterations of the Newton-Raphson method using its argument as the initial guess?
+What is the bash script which finds all numbers from 10 to its argument which are palindromes in exactly three of the bases 2 thru 16?
+What is the bash script to output the number of prime numbers between its two arguments?
+What is the bash script which replaces the cd command with a function that automatically calls ls after successfully changing directory?
+What is the bash script which outputs all Carmichael numbers less than its argument?
+What is the bash script that outputs the first n perfect numbers where n is the argument to the script?
+What is the bash script that outputs the first n prime numbers where n is given as its input argument?
+What is the bash script which identifies the user who owns the largest number of files under /home?
+What is the bash script that outputs the Julian Day Number of the date given as an argument in yyyy-mm-dd format?
+What is the bash script that outputs "true" if the number given as its argument is a palindrome; otherwise, it outputs "false"?
+What is the bash script which counts all Fibonacci numbers less than its argument which are palindromes?
+What is the bash script that uses a binary search to find its argument in the file list.txt and prints the number of the matching line?
+What is the bash script that tests the possible primality of its argument using Fermat's test implemented using a fast, modular exponentiation function and outputs true if it passes the test or false if it does not?
+What is the bash script which finds the median of the values in numbers.txt?
+What is the bash script which finds a palindrome less than its argument that is the product of three consecutive prime numbers?
+What is the bash script which outputs the first n Mersenne prime numbers where n is given as an argument to the script?
+What is the bash script that outputs the inverse Burrows-Wheeler transform of its input argument?
+What is the bash script which identifies the group that owns the largest number of files under /home?
+What is the bash script that finds all circular primes between its two arguments?
+What is the bash script that does fast, modular exponentiation where the first argument is the base, the second argument is the exponent and the third argument is the modulus?
+What is the bash script which checks that each user's group in /etc/passwd exists in /etc/group?
+What is the bash script which takes a list of process ids and prints only those that have a parent pid of 1?
+What is the bash script that outputs the nth Fibonacci number where n is passed as an argument?
+What is the bash script which converts its 32-bit argument from hex to BCD?
+What is the bash script that finds the first palindromic prime greater than its argument?
+What is the bash script which evaluates Euler's totient function for the nth Fibonacci number where n is given as the argument to the script?
+What is the bash script that finds the first number greater than its argument which is a palindrome in base 2, base 8, and base 16?
+What is the bash script which outputs "true" if its first argument is a Fermat pseudoprime with respect to the base value given as its second argument; otherwise it outputs "false"?
+What is the bash script that finds the first perfect number greater than its input argument?
+What is the bash script which outputs the prime factors of its input argument?
+What is the bash script which finds all the prime Fibonacci numbers that are less than its input argument?
+What is the bash script which outputs the least common multiple of its two input arguments?
+What is the bash script which outputs "prime" if its argument is a prime number, "carmichael" if it is a Carmichael number (using modular exponentiation) or "composite" if it is a composite number?
+Set bash2
+What is the bash command to remove the group password from the slackers group?
+What is the bash command to create a new group called slackers?
+What is the bash command to install wget on Redhat without user input?
+What is the bash command to show the version of the kernel?
+What is the bash command to make the file pretty-print.sh executable?
+What is the bash command to add a login for a new user named dodger which expires 90 days from today?
+What is the bash command to prefix every non-blank line in file.log with the string "stdout "?
+What is the bash command to create a new file called data.dat with a size of 512K bytes?
+What is the bash command to calculate the md5 checksum of every file under the directory named "Downloads"?
+What is the bash command which shows how much free space there is on the root filesystem?
+What is the bash command which lists the name and pids of the top 5 processes by percentage of CPU usage?
+What is the bash command to insert "#!/usr/bin/python3" at the top of each *.py files under the current directory?
+What is the bash command to add user test to the slackers group as administrator?
+What is the bash command to remove user test from the slackers group?
+What is the bash command to change the group ownership to slackers of my file named download.dat?
+What is the bash command to show the free space on all filesystems?
+What is the bash command to remove the slackers group?
+What is the bash command to find the largest file under my home directory?
+What is the bash command to show the fully-qualified domain name of my host?
+What is the bash command to set the system's timezone to Los Angeles?
+What is the bash command which shows how much free memory a system has?
+What is the bash command to list all files in my Downloads directory which have not been accessed within the last 3 weeks?
+What is the bash command to modify the access time of my file data.dat to be 12:00 on 2022-12-31?
+What is the bash command to make data.dat readable by just the owner?
+What is the bash command which shows how long the system has been up?
+What is the bash command to add a new user named dodger?
+What is the bash command to lock user snoopy's account?
+What is the bash command to prefix the line number to every line in file.log?
+What is the bash command to create an ext3 filesystem in my existing file named disk.img?
+What is the bash command to list the *.dat files in the current directory in ascending order by size?
+What is the bash command to set the file creation mask so that only the owner has file write permission?
+What is the bash command to change the file extension from ".mpg" to ".avi" for every file in directory /home/test/uploads?
+What is the bash command to show the version of the operating system?
+What is the bash command to restrict access of all users in the group named slackers?
+What is the bash command to show who is currently logged into the system?
+What is the bash command to count all of the directories under my home directory?
+What is the bash command to create the path src/vpd/vpd_sliop/new without an error if the path already exists?
+What is the bash command that shows the disk space used by the directory /var/log?
+What is the bash command to show the last date and time the system was rebooted?
+What is the bash command to add user test to the group called slackers?
+How do I set my user's time zone to Los Angeles in bash?
+What is the bash command to force user snoopy to change their password at next login?
+How can I use a bash script to calculate the number of days between the dates Jan 12, 2023 and Jan 20, 2024?
+What is the bash command to rename all of my files named "pgm?.py" by replacing the string "pgm" with "pgm00"?
+What is the bash command to find all *.c and *.h files under the src directory containing the pattern TODO and print just the file names?
+What is the bash command to create a FIFO named myfifo in /tmp?
+What is the bash command which will give me the date 90 days from today?
+What is the bash command to create a new systems group called hackers?
+What is the bash command to append all PNG and JPG files to the existing tar archive file images.tar?
+What is the bash command to count the total number of lines in the *.c files under my src directory?
+Set bash1
+Delete all '.c' files in folder 'dir' present in the current directory
+Change permissions to 766 for all directories in the /app/dir directory
+Print md5 sum of file file.txt in the current directory
+Calculate md5 sum of empty string
+Change permissions to 644 for all files under the /app/dir tree
+Display kernel name, release, and version
+Count all the lines of all '*.c' files in current directory recursively
+Add a line number to every line in file.txt in the current directory
+Count the number of files named file1 in the current directory
+Rename file a.txt to b.json in the current directory
+Delete '/app/dir' folder along with all files/folders present in it
+Display hostname
+Count the number of 'x' characters in a.txt in the current directory
+Fetch remaining space on device overlay
+Check available inodes on overlay file system
+Copy file test.txt from directory dir1 to dir2 in the current directory
+Create a new file test.json in the current directory with the content {"name": "test"}
+Create a new directory test in the current directory
+Add line numbers to each non-blank line in file.txt in the current directory starting with number 101
+Make the file run.py executable
+Count the number of different lines in 'file1.txt' and 'file2.txt'
+Take filename as command line argument input and display the content of the filename
+Add 'prefix_' to every non-blank line in file.txt in the current directory
+Fetch the top 5 largest files in the current directory
+Count all directories under current directory
+Display machine architecture, ie. x86_64
+Fetch total memory present in the system
+Count number of .txt files present in directory /app/dir
+Calculate and show md5 sums for every files under current directory tree
+Move file test.txt from directory dir1 to dir2 in the current directory
+Take filename and a target directory as command line argument input and move filename to the target directory
+Print the process ids of top 5 cpu consumers
+Fetch the memory currently 'available' in the system
+Add "Line of text here" on top of each *.py files under current directory
+Move all .txt files from directory dir1 to dir2 in the current directory
+Check used inodes on overlay file system
+Fetch total memory used in the system
+Copy all .txt files from directory dir1 to dir2 in the current directory
+Count the number of same lines in 'file1.txt' and 'file2.txt'
+Count the number of lines in a.txt file in current directory
+Delete file test.json from the current directory
+Count all files under "dir" in the current directory 
+Delete all files in folder 'dir' present in the current directory
+Display only the content of file.txt in the present directory
+Change the working directory to /var
+Display 12345 backwards
+Append the current user to users.txt in the current directory
+Print the process ids of top 5 memory consumers
+Move all the files from directory dir1 to dir2 in the current directory
+Print total space used on device overlay
