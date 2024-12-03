@@ -1,0 +1,1 @@
+What is the bash script which, for each user in /etc/shadow, prints out the number of days before thair password expires?

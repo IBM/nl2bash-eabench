@@ -1,0 +1,1 @@
+What is the bash script that tests the possible primality of its argument using Fermat's test implemented using a fast, modular exponentiation function and outputs true if it passes the test or false if it does not?

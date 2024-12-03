@@ -1,0 +1,12 @@
+
+: prologue(test)  : test034
+
+: podman(test)  : test034
+
+: pgm1.py:  print("Hello World!")
+: pgm2.py:  #!/usr/bin/python3
+: pgm3.py:  #!/usr/bin/python3
+
+: epilogue(test)  : test034
+
+

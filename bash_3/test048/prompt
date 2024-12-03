@@ -1,0 +1,1 @@
+What is the bash script which outputs "true" if its first argument is a Fermat pseudoprime with respect to the base value given as its second argument; otherwise it outputs "false"?

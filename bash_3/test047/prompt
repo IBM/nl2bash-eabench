@@ -1,0 +1,1 @@
+What is the bash script which outputs "prime" if its argument is a prime number, "carmichael" if it is a Carmichael number (using modular exponentiation) or "composite" if it is a composite number?

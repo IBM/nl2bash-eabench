@@ -1,0 +1,1 @@
+What is the bash script which searches the directory /home/test/downloads for symbolic links to files in /home/test/uploads and adds the name of the target file to the file uploads.targets in /home/test?

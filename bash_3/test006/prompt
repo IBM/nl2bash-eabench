@@ -1,0 +1,1 @@
+What is the bash script which takes a list of process ids and prints only those that have a parent pid of 1?

@@ -1,0 +1,61 @@
+#!/bin/bash
+#
+# Fake timedatectl
+#
+# >> timedatectl
+# (base) [test@murk AnVo]$ timedatectl
+#                Local time: Wed 2024-02-21 17:32:11 EST
+#            Universal time: Wed 2024-02-21 22:32:11 UTC
+#                  RTC time: Wed 2024-02-21 22:31:41
+#                 Time zone: America/New_York (EST, -0500)
+# System clock synchronized: no
+#               NTP service: n/a
+#           RTC in local TZ: no
+
+if (( $(id -u) != 0 ))
+then
+    printf "Must be root to change the date/time\n" >&2
+    exit 1
+fi
+
+#
+#  rm -f /etc/localtime
+#  ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
+#
+if [ $# == 0 ]
+then
+    printf "                Local time: %s\n" "$(date +"%a %Y-%m-%d %H:%M:%S %Z")"
+    printf "            Universal time: %s\n" "$(date -u +"%a %Y-%m-%d %H:%M:%S %Z")"
+    printf "                  RTC time: %s\n" "$(date +"%a %Y-%m-%d %H:%M:%S")"
+    printf "                 Time zone: %s %s\n" "$(readlink /etc/localtime | sed -E 's+^../usr/share/zoneinfo/++')" "$(date +'(%Z, %z)')"
+    printf " System clock synchronized: no\n"
+    printf "               NTP service: n/a\n"
+    printf "           RTC in local TZ: no\n"
+    exit 0
+fi
+
+if [ $# == 2 ]
+then
+    if [ $1 == "set-timezone" ]
+    then
+        zone="/usr/share/zoneinfo/$2"
+        if [ -f $zone ]
+        then
+            rm -f /etc/localtime
+            rc=$?
+            if [ $rc != 0 ]
+            then
+                printf "Failed to set time zone: Invalid time zone '$2'"
+                exit $rc
+            fi
+            ln -s $zone /etc/localtime
+        else
+            printf "Failed to set time zone: Invalid time zone '$2'"
+            exit 2
+        fi
+        exit 0
+    else
+        printf "Unknown operation $1.\n"
+    fi
+fi
+

@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+# Fake timedatectl
+#
+printf "timedatectl sets the SYSTEM timezone rather than just the user's\n" >&2
+exit 1
