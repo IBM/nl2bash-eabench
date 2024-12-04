@@ -89,5 +89,19 @@ python3 >= 3.7
 
     - MacOS - untested
 
+### Reference
+Please cite the following paper should you use our work.
+
+````{json}
+@misc{vo2024tacklingexecutionbasedevaluationnl2bash,
+      title={Tackling Execution-Based Evaluation for NL2Bash}, 
+      author={Ngoc Phuoc An Vo and Brent Paulovicks and Vadim Sheinin},
+      year={2024},
+      eprint={2405.06807},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2405.06807}, 
+}
+````
 
 
