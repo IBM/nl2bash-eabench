@@ -93,8 +93,8 @@ python3 >= 3.7
 Please cite the following paper should you use our work.
 
 ````{json}
-@misc{vo2024tacklingexecutionbasedevaluationnl2bash,
-      title={Tackling Execution-Based Evaluation for NL2Bash}, 
+@misc{vo2024executionbasedevaluationnaturallanguage,
+      title={Execution-Based Evaluation of Natural Language to Bash and PowerShell for Incident Remediation}, 
       author={Ngoc Phuoc An Vo and Brent Paulovicks and Vadim Sheinin},
       year={2024},
       eprint={2405.06807},
