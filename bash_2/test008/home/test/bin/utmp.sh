@@ -12,15 +12,17 @@
 #   - current boot time in UTC format
 #   - current kernel version
 #
-d=$(date -u --date=@$(date "+%s" --date="$(uptime -s)") +"%Y-%m-%dT%T")
-u=$(uname -r)
-
-(
-    printf  "[2] [00000] [~~  ] [reboot  ] [~           ] [%s] [0.0.0.0        ] [%s,332241+00:00]\n" $u $d
-    printf  "[1] [00051] [~~  ] [runlevel] [~           ] [%s] [0.0.0.0        ] [%s,148272+00:00]\n" $u $d
-    printf  "[7] [1      ] [ts/0] [snoopy  ] [pts/0       ] [9.61.51.96          ] [9.61.51.96     ] [1989-11-19T19:25:19,096942+00:00]\n"
-) | utmpdump -r > /var/run/utmp 2>/dev/null
-
+# 2025-feb-21: use mounted /var instead
+#
+#d=$(date -u --date=@$(date "+%s" --date="$(uptime -s)") +"%Y-%m-%dT%T")
+#u=$(uname -r)
+#
+#(
+#    printf  "[2] [00000] [~~  ] [reboot  ] [~           ] [%s] [0.0.0.0        ] [%s,332241+00:00]\n" $u $d
+#    printf  "[1] [00051] [~~  ] [runlevel] [~           ] [%s] [0.0.0.0        ] [%s,148272+00:00]\n" $u $d
+#    printf  "[7] [1      ] [ts/0] [snoopy  ] [pts/0       ] [9.61.51.96          ] [9.61.51.96     ] [1989-11-19T19:25:19,096942+00:00]\n"
+#) | utmpdump -r > /var/run/utmp 2>/dev/null
+#
 
 echo 'snoopy:x:1001:1001::/home/snoopy:/bin/bash' >> /etc/passwd
 
