@@ -20,8 +20,6 @@ work_dir=${@:$OPTIND+3:1}
     ${platform}.sh ${test_set} ${test} ${work_dir} > /dev/null
     rc=$?
 
-echo rc is $rc > /tmp/podman.log
-
     #
     # Capture errant podman return codes here
     #   - assume that our shell scripts use low values
