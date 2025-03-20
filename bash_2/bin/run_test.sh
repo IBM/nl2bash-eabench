@@ -20,7 +20,12 @@ work_dir=${@:$OPTIND+3:1}
     ${platform}.sh ${test_set} ${test} ${work_dir} > /dev/null
     rc=$?
 
-    if [ $rc == 0 ]
+    #
+    # Capture errant podman return codes here
+    #   - assume that our shell scripts use low values
+    #   - podman uses values ~70 and up
+    #
+    if [ $rc -lt 8 ]
     then
         epilogue.sh ${test_set} ${test} ${work_dir}
         evaluate.sh ${test_set} ${test} ${work_dir}
