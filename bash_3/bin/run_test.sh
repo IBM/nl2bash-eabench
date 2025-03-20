@@ -20,11 +20,22 @@ work_dir=${@:$OPTIND+3:1}
     ${platform}.sh ${test_set} ${test} ${work_dir} > /dev/null
     rc=$?
 
-    if [ $rc == 0 ]
+echo rc is $rc > /tmp/podman.log
+
+    #
+    # Capture errant podman return codes here
+    #   - assume that our shell scripts use low values
+    #   - podman uses values ~70 and up
+    #
+    if [ $rc -lt 8 ]
     then
         epilogue.sh ${test_set} ${test} ${work_dir}
         evaluate.sh ${test_set} ${test} ${work_dir}
         rc=$?
+    elif [ $rc == 255 ]
+    then
+        echo >&2 "${platform} timed out"
+        rc=2
     else
         echo >&2 "${platform} aborted, rc = $rc"
     fi
