@@ -83,9 +83,17 @@ wrkdir=${@:$OPTIND+2:1}
         eval ${var}
     done
 
-    if [ ${GROUP} != "hackers:x:996:" ]
+    echo ${GROUP} | grep -q "hackers:x:"
+    if [ $? != 0 ]
     then
-        echo >&2 "Expecting /etc/group to contain the line \"hackers:x:996:\""
+        echo >&2 "Expecting /etc/group to contain the line \"hackers:x:9??:\""
+        exit 2
+    fi
+
+    g=$(echo ${GROUP} | sed -n 's+hackers:x:\([0-9][0-9]*\):.*+\1+p')
+    if [ $g -ge 1000 ]
+    then
+        echo >&2 "Expected group ID to be less than 1000"
         exit 2
     fi
 
