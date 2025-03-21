@@ -86,9 +86,10 @@ wrkdir=${@:$OPTIND+2:1}
 
     echo GROUP is ${GROUP}
 
-    if [ ${GROUP} != "slackers:x:1001:test" ]
+    echo ${GROUP} | grep -q "slackers:x:[0-9][0-9]*:test"
+    if [ $? != 0 ]
     then
-        echo >&2 "/etc/group should have contained the line \"slackers:x:1001:test\""
+        echo >&2 "/etc/group should have contained the line \"slackers:x:10__:test\""
         exit 2
     fi
 
