@@ -12,6 +12,9 @@ printf "#++GROUP='%s'\n"   "$(grep dodger /etc/group)"
 printf "#++GSHADOW='%s'\n" "$(sudo grep dodger /etc/gshadow)"
 #
 # Change the ownership so it can be deleted from outside the container
+#   - changed from chown to chmod because of namespace problems
+#     in older versions of podman
 #
-sudo chown -R test: /home/*
+#sudo chown -R test: /home/*
 sudo rm -fr /home/dodger
+sudo chmod -R 0777 /home/*

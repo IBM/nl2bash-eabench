@@ -10,6 +10,9 @@ printf "#++GSHADOW='%s'\n" "$(sudo grep hackers /etc/gshadow)"
 #
 # Rogue command created new user home directory which I can't delete
 # from outside the container
+#   - changed from chown to chmod because of namespace problems
+#     in older versions of podman
 #
-sudo chown -R test: /home/*
+#sudo chown -R test: /home/*
+sudo chmod -R 0777 /home/*
 
