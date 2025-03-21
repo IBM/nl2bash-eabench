@@ -4,7 +4,7 @@
 #
 # --user=test
 #
-# --userns=keep-id:uid=1000,gid=1000
+# --userns=keep-id:uid=2000,gid=2000
 #
 
 test_set=${@:$OPTIND+0:1}
@@ -16,7 +16,7 @@ work_dir=${@:$OPTIND+2:1}
 
 container="eabench_bash2"
 userargs="--user=test --workdir=/home/test"
-userns="--userns=keep-id:uid=1000,gid=1000"
+userns="--userns=keep-id:uid=2000,gid=2000"
 #mntargs="--mount=type=bind,src=$(pwd)/${work_dir}/home,dst=/home"
 mntargs="--volume $(pwd)/${work_dir}/home:/home:Z"
 logargs="--log-driver=k8s-file --log-opt=path=$(pwd)/${work_dir}/podman.log"

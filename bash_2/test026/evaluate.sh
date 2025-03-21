@@ -97,9 +97,9 @@ wrkdir=${@:$OPTIND+2:1}
 
     #echo USER is "${USER}"
 
-    if [ ${USER} != "uid=1001(dodger)_gid=1001(dodger)_groups=1001(dodger)" ]
+    if [ ${USER} != "uid=2001(dodger)_gid=2001(dodger)_groups=2001(dodger)" ]
     then
-        echo >&2 "Expected to see user \"dodger\" with uid of 1001"
+        echo >&2 "Expected to see user \"dodger\" with uid of 2001"
         exit 2
     fi
 

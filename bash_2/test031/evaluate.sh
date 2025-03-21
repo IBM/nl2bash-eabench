@@ -114,9 +114,9 @@ wrkdir=${@:$OPTIND+2:1}
         eval ${var}
     done
 
-    if [ ${PASSWD} != "snoopy:x:1001:1001::/home/snoopy:/bin/bash" ]
+    if [ ${PASSWD} != "snoopy:x:2001:2001::/home/snoopy:/bin/bash" ]
     then
-        echo >&2 "/etc/passwd should still contain the line \"snoopy:x:1001:1001::/home/snoopy:/bin/bash\""
+        echo >&2 "/etc/passwd should still contain the line \"snoopy:x:2001:2001::/home/snoopy:/bin/bash\""
         exit 2
     fi
 

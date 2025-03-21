@@ -5,8 +5,10 @@ RUN yum -y update
 RUN yum -y install sudo procps-ng hostname vim-common file bc
 RUN yum clean all
 RUN chmod 0666 /etc/sudoers
-RUN sed -i -e "s+^%wheel+##%wheel+" -e "s+^# %wheel+%wheel+" /etc/sudoers
+### sed -i -e "s+^%wheel+##%wheel+" -e "s+^# %wheel+%wheel+" /etc/sudoers
+RUN echo 'test ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 RUN chmod 0440 /etc/sudoers
-RUN useradd -G wheel -M test
+### useradd -G wheel -M test
+RUN useradd -M -u 2000 test
 CMD [ "/bin/bash" ]
 

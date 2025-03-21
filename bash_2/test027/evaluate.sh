@@ -103,13 +103,13 @@ wrkdir=${@:$OPTIND+2:1}
     #echo "ID is " ${ID}
     #echo USER is "${USER}"
 
-    if [ ${ID} != "uid=1001(dodger)_gid=1001(dodger)_groups=1001(dodger)" ]
+    if [ ${ID} != "uid=2001(dodger)_gid=2001(dodger)_groups=2001(dodger)" ]
     then
-        echo >&2 "Expected to see user \"dodger\" with uid of 1001"
+        echo >&2 "Expected to see user \"dodger\" with uid of 2001"
         exit 2
     fi
 
-    T="dodger:x:1001:1001::/home/dodger:/bin/bash"
+    T="dodger:x:2001:2001::/home/dodger:/bin/bash"
     if [ ${PASSWD} != $T ]
     then
         echo >&2 "Expected /etc/passwd entry of \"$T\""
@@ -130,7 +130,7 @@ wrkdir=${@:$OPTIND+2:1}
         exit 2
     fi
 
-    T="dodger:x:1001:"
+    T="dodger:x:2001:"
     if [ ${GROUP} != $T ]
     then
         echo >&2 "Expected /etc/group entry of \"$T\""
