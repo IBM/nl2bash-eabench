@@ -1,1 +1,1 @@
---volume $(pwd)/${work_dir}/var:/var:Z
+--volume $(pwd)/${work_dir}/var:/var:ro

@@ -16,11 +16,23 @@ mntargs="--volume $(pwd)/${work_dir}/home:/home:Z"
 
 if [ -f ${test_set}/${test}/podman.opts ]
 then
-    tmo=$(sed -n 's+.*timeout=\([0-9][0-9]*\).*+\1+p' ${test_set}/${test}/podman.opts)
+    podopts=$(cat ${test_set}/${test}/podman.opts)
+    podopts=$(eval "echo ${podopts}")
+else
+    podopts=""
+fi
+
+echo ${podopts} | grep -q timeout
+if [ $? == 0 ]
+then
+    # Docker doesn't have --timeout so fake it with Linux "timeout"
+    tmo=$(echo ${podopts} | sed -n 's+.*timeout=\([0-9][0-9]*\).*+\1+p')
     if [ -z "$tmo" ]
     then
         tmo=10
     fi
+    # Now remove it from podopts
+    podopts=$(echo $podopts | sed 's+--timeout=\([0-9][0-9]*\) *++')
 else
     tmo=10
 fi
