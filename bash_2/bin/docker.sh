@@ -16,7 +16,7 @@ mntargs="--volume $(pwd)/${work_dir}/home:/home:Z"
 
 if [ -f ${test_set}/${test}/podman.opts ]
 then
-    tmo=$(sed 's+.*timeout-\([0-9][0-9]*\).*+\1+p' ${test_set}/${test}/podman.opts)
+    tmo=$(sed -n 's+.*timeout=\([0-9][0-9]*\).*+\1+p' ${test_set}/${test}/podman.opts)
     if [ -z "$tmo" ]
     then
         tmo=10
@@ -32,8 +32,9 @@ rc=$?
 
 #
 # Catch timeout rc and map to 255, same as podman
+#   - can be either 124 (SIGTERM) or 137 (SIGKILL)
 #
-if [ $rc == 124 ]
+if [ $rc == 124 ] || [ $rc == 137 ]
 then
     rc=255
 fi

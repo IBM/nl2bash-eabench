@@ -2,7 +2,7 @@
 #
 # Debugging tool
 #   > cd ~/nl2bash-eabench
-#   > ./bash_2/bin/run-it.sh testX
+#   > ./bash_3/bin/run-it.sh testX
 #   (now run testX container components)
 #
 print_usage() {
@@ -33,8 +33,8 @@ then
 fi
 
 test=$1
-test_set="bash_2"
-container="eabench_bash2"
+test_set="bash_3"
+container="eabench_bash3"
 work_dir="output/${test_set}/${test}"
 
 if [ ! -d $test_set/$test ]
