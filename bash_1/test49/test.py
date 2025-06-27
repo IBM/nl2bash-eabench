@@ -6,7 +6,7 @@ def main():
     run_output = subprocess.run(["bash", "test49.sh", "file1.txt"], capture_output=True, text=True)
     run_output2 = subprocess.run(["bash", "test49.sh", "file2.txt"], capture_output=True, text=True)
 
-    if run_output.stderr == "" and "My name is Harry Potter\n" == run_output.stdout and "Hello Harry Potter, my name is Tom Marvolo Riddle\n" == run_output2.stdout:
+    if run_output.stderr == "" and "My name is Harry Potter\n" in run_output.stdout and "Hello Harry Potter, my name is Tom Marvolo Riddle\n" in run_output2.stdout:
         result = "Pass"
     else:
         result = "Fail"

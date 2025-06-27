@@ -28,6 +28,9 @@ def main():
 
     for memory in memories:
         for number in numbers:
+            if memory == 0:
+                result = "Pass" if number==0 else "Fail"
+                break
             if abs(number - memory) / memory < 0.01:
                 result = "Pass"
                 break
